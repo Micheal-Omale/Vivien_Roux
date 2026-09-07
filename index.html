@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivien Roux — Art Director &amp; Collage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232A19B0'/%3E%3Crect x='7' y='7' width='18' height='18' rx='4' fill='%23D8F63D'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ grain + shape defs ============ -->
+<svg class="defs" aria-hidden="true">
+  <defs>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <symbol id="bust" viewBox="0 0 100 120">
+      <path d="M50 8c-13 0-22 10-22 24 0 9 3 17 8 22-2 4-7 6-14 8-13 4-20 12-20 26v32h96V88c0-14-7-22-20-26-7-2-12-4-14-8 5-5 8-13 8-22 0-14-9-24-22-24z"/>
+    </symbol>
+    <symbol id="squiggle" viewBox="0 0 100 20">
+      <path d="M0 10c5-9 10-9 15 0s10 9 15 0 10-9 15 0 10 9 15 0 10-9 15 0 10 9 15 0" fill="none" stroke-width="4"/>
+    </symbol>
+  </defs>
+</svg>
+<div class="grain" aria-hidden="true"><svg><rect width="100%" height="100%" filter="url(#grain)"/></svg></div>
+
+<!-- ============ preloader ============ -->
+<div class="preloader" id="preloader">
+  <div class="pre-inner">
+    <div class="pre-line"><span class="pre-label">Setting the type</span></div>
+    <div class="pre-count"><span id="preCount">00</span></div>
+  </div>
+</div>
+
+<!-- ============ cursor preview (work index) ============ -->
+<div class="preview" id="preview" aria-hidden="true"></div>
+
+<!-- ============ nav ============ -->
+<header class="nav" id="nav">
+  <a class="mark" href="#top" aria-label="Home">
+    <span class="mark-a"></span><span class="mark-b"></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#studio">Studio</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="pill" href="#contact">Say Hello</a>
+</header>
+
+<main id="top">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" data-theme="ink">
+  <h1 class="hero-title">
+    <span class="ht-line">MADE BY</span>
+    <span class="ht-line ht-indent">HAND</span>
+  </h1>
+
+  <div class="hero-intro">
+    <p class="body-copy">I am Vivien Roux — an art director who cuts, tears and presses images into identities. Everything here was made slowly, on purpose.</p>
+    <a class="btn" href="#work"><span>See The Work</span></a>
+  </div>
+
+  <ul class="hero-stats">
+    <li><b>+12</b><span>Years<br>Practising</span></li>
+    <li><b>+90</b><span>Projects<br>Pressed</span></li>
+    <li><b>+07</b><span>Awards<br>Collected</span></li>
+  </ul>
+
+  <figure class="hero-card collage" data-prompt="hero-portrait">
+    <img src="images/hero-portrait.png" alt="Vivien Roux self-portrait collage">
+    <figcaption class="c-tag">Fig. 01 — self, torn</figcaption>
+  </figure>
+</section>
+
+<!-- ============ 2. MARQUEE ============ -->
+<section class="marquee-wrap" data-theme="acid">
+  <div class="marquee" id="marquee"></div>
+</section>
+
+<!-- ============ 3. STUDIO / ABOUT ============ -->
+<section class="studio" id="studio" data-theme="acid">
+  <span class="eyebrow">Who?</span>
+  <h2 class="section-title"><span>The</span><span class="indent">Studio</span></h2>
+  <a class="btn ghost" href="#process"><span>Learn More</span></a>
+
+  <div class="studio-copy">
+    <p class="body-copy">I work the way a printer works. Cut the shape, place it, look at it for a day, move it two millimetres, then press.</p>
+    <p class="body-copy">No templates, no filters, no rush. Scissors, a flatbed scanner, a lot of paper, and the patience to leave something alone until it is right.</p>
+  </div>
+
+  <figure class="studio-card collage" data-prompt="studio-bench">
+    <img src="images/studio-bench.png" alt="Vivien Roux at the studio work bench">
+    <figcaption class="c-tag">Fig. 02 — at the bench</figcaption>
+  </figure>
+</section>
+
+<!-- ============ 4. WORK INDEX ============ -->
+<section class="work" id="work" data-theme="acid">
+  <span class="eyebrow">What?</span>
+  <h2 class="section-title dark"><span>Selected</span><span class="indent">Work</span></h2>
+
+  <ol class="index" id="index">
+    <li class="row" data-art="1"><span class="r-num">01</span><span class="r-name">Saltmarsh Editions</span><span class="r-type">Identity</span><span class="r-year">2025</span></li>
+    <li class="row" data-art="2"><span class="r-num">02</span><span class="r-name">Ottolinger Archive</span><span class="r-type">Art Direction</span><span class="r-year">2025</span></li>
+    <li class="row" data-art="3"><span class="r-num">03</span><span class="r-name">Verdigris Press</span><span class="r-type">Print &amp; Web</span><span class="r-year">2024</span></li>
+    <li class="row" data-art="4"><span class="r-num">04</span><span class="r-name">Nocturne Radio</span><span class="r-type">Brand &amp; Motion</span><span class="r-year">2024</span></li>
+    <li class="row" data-art="5"><span class="r-num">05</span><span class="r-name">Hollow Bones</span><span class="r-type">Editorial</span><span class="r-year">2023</span></li>
+    <li class="row" data-art="6"><span class="r-num">06</span><span class="r-name">Papier Mâché</span><span class="r-type">Packaging</span><span class="r-year">2023</span></li>
+  </ol>
+</section>
+
+<!-- ============ 5. SIGNATURE — THE ASSEMBLY ============ -->
+<section class="assembly" id="assembly" data-theme="ink">
+  <div class="asm-stage" id="asmStage">
+    <h2 class="asm-title"><span>ONE PIECE</span><span class="indent">AT A TIME</span></h2>
+    <div class="asm-pieces" id="asmPieces"></div>
+    <p class="asm-caption" id="asmCaption">Eleven cuts. Four hours. One poster that could not have been generated.</p>
+  </div>
+</section>
+
+<!-- ============ 6. PROCESS ============ -->
+<section class="process" id="process" data-theme="acid">
+  <span class="eyebrow">How?</span>
+  <h2 class="section-title dark"><span>The</span><span class="indent">Method</span></h2>
+
+  <div class="cards">
+    <article class="card">
+      <figure class="collage sm" data-prompt="method-cut">
+        <img src="images/method-cut.png" alt="01 Cut method">
+      </figure>
+      <h3>01 — Cut</h3>
+      <p class="body-copy">Every element is separated by hand before it is allowed near a grid. Blunt scissors leave a better edge than a pen tool.</p>
+    </article>
+    <article class="card">
+      <figure class="collage sm" data-prompt="method-arrange">
+        <img src="images/method-arrange.png" alt="02 Arrange method">
+      </figure>
+      <h3>02 — Arrange</h3>
+      <p class="body-copy">Pieces are laid out, photographed, slept on, and laid out again. The second arrangement is never the last one.</p>
+    </article>
+    <article class="card">
+      <figure class="collage sm" data-prompt="method-press">
+        <img src="images/method-press.png" alt="03 Press method">
+      </figure>
+      <h3>03 — Press</h3>
+      <p class="body-copy">Scanned at 1200dpi, printed, scanned again. The generation loss is the point — it is what makes it feel touched.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 7. CONTACT ============ -->
+<section class="contact" id="contact" data-theme="ink">
+  <h2 class="cta-title">
+    <span class="ht-line">LET&rsquo;S MAKE</span>
+    <span class="ht-line">SOMETHING</span>
+    <span class="ht-line ht-indent">SLOWLY</span>
+  </h2>
+  <a class="btn big" href="mailto:studio@vivienroux.test"><span>studio@vivienroux.test</span></a>
+</section>
+
+<footer class="foot" data-theme="ink">
+  <span>Vivien Roux — Lisbon</span>
+  <nav class="nav-links"><a href="#work">Work</a><a href="#studio">Studio</a><a href="#process">Process</a></nav>
+  <span>&copy; 2026</span>
+</footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
